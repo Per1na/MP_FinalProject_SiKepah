@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MP_FinalProject</string>
+    <string name="Register_Header">Buat Akun\nPelanggan</string>
+    <string name="Label_nama">Nama</string>
+    <string name="Label_email">Email</string>
+    <string name="Label_sandi">Sandi</string>
+</resources>
