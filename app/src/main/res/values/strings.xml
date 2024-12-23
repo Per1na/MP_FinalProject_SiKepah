@@ -1,6 +1,22 @@
 <resources>
-    <string name="app_name">MP_FinalProject</string>
-    <string name="Register_Header">Buat Akun\nPelanggan</string>
+    <!--TAMPILAN AWAL -->
+    <string name="nama_aplikasi">SIKEPAH</string>
+    <string name="detail_nama_aplikasi">PENGEPUL SAMPAH JOGJA</string>
+    <string name="login_sebagai">Login Sebagai?</string>
+    <string name="login_sebagai1">Pelanggan</string>
+    <string name="logim_sebagai2">Driver</string>
+
+
+
+
+
+
+
+
+
+    <string name="app_name">SIKEPAH</string>
+    <string name="Register_Header_Pelanggan">Buat Akun\nPelanggan</string>
+    <string name="Register_Header_Driver">Buat Akun\nDriver</string>
     <string name="Label_nama">Nama Lengkap</string>
     <string name="Label_email">Email</string>
     <string name="arrow">Deskripsi untuk ikon panah</string>
