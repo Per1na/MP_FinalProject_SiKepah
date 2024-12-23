@@ -77,7 +77,7 @@
         android:layout_marginBottom="15dp"
         android:text="@string/Register_Header"
         android:textColor="@android:color/white"
-        android:textSize="40sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
