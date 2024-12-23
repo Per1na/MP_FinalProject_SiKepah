@@ -17,12 +17,4 @@
         android:fillColor="#FFFFFF"
         android:pathData="M0,108a54,54 0,0 1,108 0a54,54 0,0 1,-108 0z" />
 
-    <text
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:text="BA"
-        android:x="54"
-        android:y="54"
-        android:gravity="center" />
-
 </vector>
