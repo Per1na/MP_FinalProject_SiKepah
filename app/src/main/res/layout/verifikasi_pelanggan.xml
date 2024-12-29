@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hijau_lumut">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:shadowColor="@color/hitam"
+        android:shadowDx="2"
+        android:shadowDy="8"
+        android:shadowRadius="9"
+        android:text="@string/Register_Header_Pelanggan"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:textColor="@color/putih"
+        android:textSize="@dimen/_34ssp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rectangled_shape"
+        android:ems="20"
+        android:hint="@string/Label_email_supir"
+        android:maxHeight="@dimen/_40sdp"
+        android:padding="@dimen/_12sdp"
+        android:textSize="@dimen/_12ssp" />
+
+</android.widget.RelativeLayout>

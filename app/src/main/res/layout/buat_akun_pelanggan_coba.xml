@@ -22,7 +22,7 @@
                 android:layout_marginStart="@dimen/_1sdp"
                 android:layout_marginTop="@dimen/_100sdp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="@string/Register_Header_Supir"
+                android:text="@string/Register_Header_Pelanggan"
                 android:textAlignment="textStart"
                 android:textAllCaps="true"
                 android:textColor="@color/putih"
@@ -33,11 +33,11 @@
                 android:shadowRadius="9"/>
 
             <EditText
-                android:id="@+id/etUsernameSupir"
+                android:id="@+id/etUsernamePelanggan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="20"
-                android:hint="@string/Label_nama_supir"
+                android:hint="@string/Label_nama_pelanggan"
                 android:background="@drawable/rectangled_shape"
                 android:padding="@dimen/_12sdp"
                 android:maxHeight="@dimen/_40sdp"
@@ -45,11 +45,11 @@
                 android:layout_marginTop="@dimen/_10sdp"/>
 
             <EditText
-                android:id="@+id/etEmailSupir"
+                android:id="@+id/etEmailPelanggan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="20"
-                android:hint="@string/Label_email_supir"
+                android:hint="@string/Label_email_pelanggan"
                 android:background="@drawable/rectangled_shape"
                 android:padding="@dimen/_12sdp"
                 android:maxHeight="@dimen/_40sdp"
@@ -63,32 +63,31 @@
                 android:layout_marginTop="@dimen/_10sdp">
 
                 <EditText
-                    android:id="@+id/etKataSandiSupir"
+                    android:id="@+id/etKataSandiPelanggan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:background="@drawable/rectangled_shape"
                     android:drawablePadding="8dp"
-                    android:hint="@string/Label_sandi_supir"
+                    android:hint="@string/Label_sandi_pelanggan"
                     android:inputType="textPassword"
                     android:padding="16dp"
                     android:textSize="14sp"
                     android:layout_alignParentStart="true"
-                    android:layout_toStartOf="@id/TogglePasswordSupir" />
+                    android:layout_toStartOf="@id/TogglePasswordPelanggan" />
 
                 <!-- Show/Hide Password Button (ImageView) -->
                 <ImageView
-                    android:id="@+id/TogglePasswordSupir"
+                    android:id="@+id/TogglePasswordPelanggan"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/toggle_password_visibility_supir"
-                    android:src="@drawable/hide_supir" />
+                    android:contentDescription="@string/toggle_password_visibility_pelanggan"
+                    android:src="@drawable/hide_pelanggan" />
 
             </RelativeLayout>
-
 
             <Button
                 android:id="@+id/ellipse_button"
@@ -113,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/inter_18pt_medium"
-                    android:text="@string/sudah_punya_akun_supir"
+                    android:text="@string/sudah_punya_akun_pelanggan"
                     android:textColor="@color/putih"
                     android:textSize="@dimen/_14ssp" />
 
@@ -126,7 +125,7 @@
                     android:id="@+id/teks_kanan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Masuk_supir"
+                    android:text="@string/Masuk_pelanggan"
                     android:layout_centerInParent="true"
                     android:background="@drawable/rounded_rectangled_button" />
 

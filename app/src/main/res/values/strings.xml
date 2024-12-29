@@ -3,24 +3,36 @@
     <string name="nama_aplikasi">SIKEPAH</string>
     <string name="detail_nama_aplikasi">PENGEPUL SAMPAH JOGJA</string>
     <string name="login_sebagai">Login Sebagai?</string>
-    <string name="login_sebagai1">Pelanggan</string>
-    <string name="logim_sebagai2">Driver</string>
-
-
-
-
-
-
-
-
+    <string name="login_sebagai_1">Pelanggan</string>
+    <string name="logim_sebagai_2">Supir</string>
 
     <string name="app_name">SIKEPAH</string>
+
+
+
+    <!--PELANGGAN -->
     <string name="Register_Header_Pelanggan">Buat Akun\nPelanggan</string>
-    <string name="Register_Header_Driver">Buat Akun\nDriver</string>
-    <string name="Label_nama">Nama Lengkap</string>
-    <string name="Label_email">Email</string>
+    <string name="sudah_punya_akun_pelanggan">Sudah punya akun?</string>
+    <string name="Masuk_kebuat_akun_pelanggan">Masuk</string>
+    <string name="Masuk_pelanggan">Masuk</string>
+    <string name="toggle_password_visibility_pelanggan">lihat password</string>
+
+    <!--SUPIR -->
+    <string name="Register_Header_Supir">Buat Akun\nSupir</string>
+    <string name="sudah_punya_akun_supir">Sudah punya akun?</string>
+    <string name="Masuk_kebuat_akun_supir">Masuk</string>
+    <string name="Masuk_supir">Masuk</string>
+    <string name="toggle_password_visibility_supir">lihat password</string>
+
+    <string name="Label_nama_pelanggan">Nama Lengkap</string>
+    <string name="Label_email_pelanggan">Email</string>
+    <string name="Label_sandi_pelanggan">Kata Sandi</string>
+
+    <string name="Label_nama_supir">Nama Lengkap</string>
+    <string name="Label_email_supir">Email</string>
+    <string name="Label_sandi_supir">Kata Sandi</string>
+
     <string name="arrow">Deskripsi untuk ikon panah</string>
-    <string name="Label_sandi">Kata Sandi</string>
     <string name="Punya_akun">Sudah Punya Akun?</string>
-    <string name="Masuk">Masuk</string>
+
 </resources>

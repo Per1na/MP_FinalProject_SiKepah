@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="hitam">#FF000000</color>
+    <color name="putih">#FFFFFFFF</color>
+    <color name="abu_abu">#80000000</color>
     <color name="ic_logo_background">#4BAE4F</color>
+    <color name="hijau_lumut">#4BAE4F</color>
 </resources>
