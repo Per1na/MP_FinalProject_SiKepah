@@ -1,8 +1,8 @@
 package com.example.mp_finalproject
 
 import android.os.Bundle
-import android.text.method.HideReturnsTransformationMethod
-import android.text.method.PasswordTransformationMethod
+import android.text.InputType
+import android.view.MotionEvent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -24,37 +24,18 @@ class MainActivity : AppCompatActivity() {
                 setupBackButtonListeners()
             }
 
-            // Menangani Toggle Kata Sandi Driver
-            val passwordEditTextSupir: EditText = findViewById(R.id.etKataSandiSupir)
-            val togglePasswordImageViewSupir: ImageView = findViewById(R.id.TogglePasswordSupir)
-            togglePasswordImageViewSupir.setOnClickListener {
-                if (passwordEditTextSupir.transformationMethod == PasswordTransformationMethod.getInstance()) {
-                    // Tampilkan Kata Sandi
-                    passwordEditTextSupir.transformationMethod = HideReturnsTransformationMethod.getInstance()
-                    togglePasswordImageViewSupir.setImageResource(R.drawable.show_supir) // Ganti dengan ikon untuk menampilkan password
-                } else {
-                    // Sembunyikan Kata Sandi
-                    passwordEditTextSupir.transformationMethod = PasswordTransformationMethod.getInstance()
-                    togglePasswordImageViewSupir.setImageResource(R.drawable.hide_supir) // Ganti dengan ikon untuk menyembunyikan password
+            // Menambahkan show/hide password untuk Driver
+            val etKataSandiSupir = findViewById<EditText>(R.id.etKataSandiSupir)
+            etKataSandiSupir.setOnTouchListener { _, event ->
+                if (event.action == MotionEvent.ACTION_UP) {
+                    val drawableRight = etKataSandiSupir.compoundDrawables[2]  // drawableEnd
+                    if (event.x >= (etKataSandiSupir.right - drawableRight.bounds.width())) {
+                        togglePasswordVisibility(etKataSandiSupir)
+                        it.performClick() // Memanggil performClick untuk aksesibilitas
+                        return@setOnTouchListener true
+                    }
                 }
-            }
-
-
-            // Menangani 'Daftar' button untuk Driver
-            val daftarButtonDriver: Button = findViewById(R.id.ellipse_button)
-            daftarButtonDriver.setOnClickListener {
-                val usernameDriver: String = findViewById<EditText>(R.id.etUsernameSupir).text.toString()
-                val emailDriver: String = findViewById<EditText>(R.id.etEmailSupir).text.toString()
-                val passwordDriver: String = passwordEditTextSupir.text.toString()
-
-                if (usernameDriver.isNotEmpty() && emailDriver.isNotEmpty() && passwordDriver.isNotEmpty()) {
-                    // Proses registrasi driver, misalnya mengirim data ke server atau menyimpannya
-                    // Misalnya, bisa menampilkan pesan sukses
-                    // Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
-                } else {
-                    // Tampilkan pesan kesalahan jika input tidak lengkap
-                    // Toast.makeText(this, "Harap lengkapi semua kolom", Toast.LENGTH_SHORT).show()
-                }
+                false
             }
         }
 
@@ -68,37 +49,18 @@ class MainActivity : AppCompatActivity() {
                 setupBackButtonListeners()
             }
 
-            // Menangani Button Kata Sandi Pelanggan
-            val passwordEditTextPelanggan: EditText = findViewById(R.id.etKataSandiPelanggan)
-            val togglePasswordImageViewPelanggan: ImageView = findViewById(R.id.TogglePasswordPelanggan)
-
-            togglePasswordImageViewPelanggan.setOnClickListener {
-                if (passwordEditTextPelanggan.transformationMethod == PasswordTransformationMethod.getInstance()) {
-                    // Show Kata Sandi
-                    passwordEditTextPelanggan.transformationMethod = HideReturnsTransformationMethod.getInstance()
-                    togglePasswordImageViewPelanggan.setImageResource(R.drawable.show_pelanggan) // Ganti dengan ikon untuk menampilkan password
-                } else {
-                    // Hide Kata Sandi
-                    passwordEditTextPelanggan.transformationMethod = PasswordTransformationMethod.getInstance()
-                    togglePasswordImageViewPelanggan.setImageResource(R.drawable.hide_pelanggan) // Ganti dengan ikon untuk menyembunyikan password
+            // Menambahkan show/hide password untuk Pelanggan
+            val etKataSandiPelanggan = findViewById<EditText>(R.id.etKataSandiPelanggan)
+            etKataSandiPelanggan.setOnTouchListener { _, event ->
+                if (event.action == MotionEvent.ACTION_UP) {
+                    val drawableRight = etKataSandiPelanggan.compoundDrawables[2]  // drawableEnd
+                    if (event.x >= (etKataSandiPelanggan.right - drawableRight.bounds.width())) {
+                        togglePasswordVisibility(etKataSandiPelanggan)
+                        it.performClick() // Memanggil performClick untuk aksesibilitas
+                        return@setOnTouchListener true
+                    }
                 }
-            }
-
-            // Menangani 'Daftar' button
-            val daftarButton: Button = findViewById(R.id.ellipse_button)
-            daftarButton.setOnClickListener {
-                val username: String = findViewById<EditText>(R.id.etUsernameSupir).text.toString()
-                val email: String = findViewById<EditText>(R.id.etEmailSupir).text.toString()
-                val password: String = passwordEditTextPelanggan.text.toString()
-
-                if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
-                    // Proses registrasi pelanggan, misalnya mengirim data ke server atau menyimpannya
-                    // Misalnya, bisa menampilkan pesan sukses
-                    // Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
-                } else {
-                    // Tampilkan pesan kesalahan jika input tidak lengkap
-                    // Toast.makeText(this, "Harap lengkapi semua kolom", Toast.LENGTH_SHORT).show()
-                }
+                false
             }
         }
     }
@@ -124,6 +86,23 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun togglePasswordVisibility(editText: EditText) {
+        val isPasswordVisible = editText.inputType == InputType.TYPE_TEXT_VARIATION_PASSWORD
+        val newInputType = if (isPasswordVisible) {
+            InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+        } else {
+            InputType.TYPE_TEXT_VARIATION_PASSWORD
+        }
+        editText.inputType = newInputType
+        editText.setSelection(editText.text.length)
+
+        // Toggle the drawable icon (show/hide password)
+        val drawable = if (isPasswordVisible) {
+            R.drawable.hide_pelanggan  // Ganti dengan drawable hide
+        } else {
+            R.drawable.show_pelanggan // Ganti dengan drawable show
+        }
+        editText.setCompoundDrawablesWithIntrinsicBounds(0, 0, drawable, 0)
+    }
 }
-
-

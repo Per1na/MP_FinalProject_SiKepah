@@ -77,11 +77,11 @@
 
         <!-- TOMBOL/BUTTON  -->
         <LinearLayout
-            android:id="@+id/buttonLayout"
-            style="?android:attr/buttonBarStyle"
+            android:id="@+id/buttonLayout" style="?android:attr/buttonBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_80sdp"
+            android:weightSum="1"
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_below="@id/teks_login"
