@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Krem">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/dashboard_nav"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <!-- Tombol Kembali -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_gravity="start|center_vertical"
+            android:contentDescription="@string/arrow"
+            android:src="@drawable/back_button"
+            app:tint="@color/putih"
+            android:elevation="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_20sdp" />
+
+
+        <!-- TextView untuk judul toolbar -->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Dashboard_namaAplikasi"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/jenis_sampah_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <!-- Konten card view -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hijau_lumut"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Isi dari card view -->
+            <TextView
+                android:id="@+id/jenis_sampah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Jenis Sampah"
+                android:textColor="@color/putih"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/jenis_sampah_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <!-- Radio button untuk pilihan jenis sampah -->
+                <RadioButton
+                    android:id="@+id/plastik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Plastik"
+                    android:textColor="@color/putih"
+                    android:checked="true" /> <!-- Atur checked sesuai pilihan -->
+
+                <RadioButton
+                    android:id="@+id/kertas_kardus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Kertas/Kardus"
+                    android:textColor="@color/putih"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/logam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Logam"
+                    android:textColor="@color/putih"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/kaca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Kaca"
+                    android:textColor="@color/putih"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/elektronik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/radio_button"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Elektronik"
+                    android:textColor="@color/putih"
+                    android:checked="true" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Konten lainnya -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/berat_sampah_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jenis_sampah_card"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hijau_lumut"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Konten card untuk berat sampah -->
+            <TextView
+                android:id="@+id/berat_sampah"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:text="Berat Sampah"
+                android:textColor="@color/putih"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/minus_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="minus button"
+                android:src="@drawable/ic_remove" />
+
+            <TextView
+                android:id="@+id/berat_sampah_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="xx"
+                android:textColor="@color/putih"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kg"
+                android:textColor="@color/putih"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/plus_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="plus button"
+                android:src="@drawable/ic_add" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button_createPelanggan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/berat_sampah_card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/hijau_lumut"
+        android:padding="8dp"
+        android:text="Next"
+        android:textColor="@color/putih"/>
+</RelativeLayout>

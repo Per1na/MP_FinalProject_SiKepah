@@ -1,0 +1,154 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Container utama menggunakan RelativeLayout untuk penataan elemen di dalamnya -->
+    <android.widget.RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hijau_lumut">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/_30sdp"
+            android:weightSum="1">
+
+                <!-- TextView Header -->
+                <TextView
+                android:id="@+id/VerifikasiPelanggan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/Verifikasi_Pelanggan"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_30ssp"
+                android:shadowColor="@color/hitam"
+                android:shadowDx="2"
+                android:shadowDy="8"
+                android:shadowRadius="9"/>
+
+            <!-- EditText untuk Verifikasi Pelanggan -->
+            <EditText
+                android:id="@+id/etVerifikasiPelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rectangled_shape"
+                android:hint="@string/Verifikasi_Pelanggan"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_12sdp"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/etDeskripsiVerifikasiPelanggan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/Deskripsi_Verifikasi"
+                android:textColor="@color/putih"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_10ssp"/>
+
+            <Button
+                android:id="@+id/button_VerifikasiPelanggan"
+                android:layout_width="139dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rounded_rectangled_button"
+                android:drawableTop="@drawable/ic_arrow"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/teks_kiri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/inter_18pt_medium"
+                    android:text="@string/Kode_tidak_terkirimPelanggan"
+                    android:textColor="@color/putih"
+                    android:textSize="@dimen/_12ssp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/teks_kanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Kirim_UlangPelanggan"
+                    android:textSize="@dimen/_10ssp"
+                    android:background="@drawable/rounded_rectangled_button" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.widget.RelativeLayout>
+
+    <!-- DEKORASI ELLIPSE -->
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="-80dp"
+        android:layout_marginTop="-200dp"
+        android:layout_gravity="top|start"
+        android:background="@drawable/ellipse_shape"
+        android:elevation="@dimen/_12sdp"/>
+
+    <View
+
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="-140dp"
+        android:layout_marginTop="-280dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/ellipse_shape"
+        android:elevation="@dimen/_10sdp"/>
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="-140dp"
+        android:layout_marginBottom="-280dp"
+        android:layout_gravity="bottom|start"
+        android:background="@drawable/ellipse_shape"
+        android:elevation="@dimen/_12sdp"/>
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginEnd="-80dp"
+        android:layout_marginBottom="-200dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/ellipse_shape"
+        android:elevation="@dimen/_10sdp"/>
+
+    <!-- Tombol Kembali -->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/arrow"
+        android:src="@drawable/back_button"
+        android:elevation="@dimen/_12sdp"/>
+
+</FrameLayout>

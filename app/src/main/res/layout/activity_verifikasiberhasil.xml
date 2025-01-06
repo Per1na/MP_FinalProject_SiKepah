@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hijau_lumut">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_100sdp">
+
+            <!-- TextView Header -->
+            <TextView
+                android:id="@+id/VerifikasiDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:shadowColor="@color/hitam"
+                android:shadowDx="2"
+                android:shadowDy="8"
+                android:shadowRadius="9"
+                android:text="@string/Verifikasi_BerhasilPelanggan"
+                android:textAllCaps="true"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_24ssp" />
+
+            <!-- ImageView Below TextView -->
+            <ImageView
+                android:id="@+id/vectorImageView"
+                android:layout_width="105dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/rounded_checklist_button"
+                android:src="@drawable/ic_checklist" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- DEKORASI ELLIPSE -->
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="-80dp"
+        android:layout_marginTop="-200dp"
+        android:layout_gravity="top|start"
+        android:background="@drawable/ellipse_shape"
+        android:elevation="@dimen/_12sdp"/>
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="-140dp"
+        android:layout_marginTop="-280dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/ellipse_shape"
+        android:elevation="@dimen/_10sdp"/>
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="-140dp"
+        android:layout_marginBottom="-280dp"
+        android:layout_gravity="bottom|start"
+        android:background="@drawable/ellipse_shape"
+        android:elevation="@dimen/_12sdp"/>
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginEnd="-80dp"
+        android:layout_marginBottom="-200dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/ellipse_shape"
+        android:elevation="@dimen/_10sdp"/>
+
+</FrameLayout>
