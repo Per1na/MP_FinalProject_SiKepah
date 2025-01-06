@@ -11,18 +11,34 @@
 
 
     <!--PELANGGAN -->
+    <string name="Login_Header_Pelanggan">Masuk Akun\nPelanggan</string>
     <string name="Register_Header_Pelanggan">Buat Akun\nPelanggan</string>
     <string name="sudah_punya_akun_pelanggan">Sudah punya akun?</string>
     <string name="Masuk_kebuat_akun_pelanggan">Masuk</string>
     <string name="Masuk_pelanggan">Masuk</string>
     <string name="toggle_password_visibility_pelanggan">lihat password</string>
+    <string name="belum_punya_akunPelanggan">Belum Punya Akun</string>
+    <string name="Buat_akunPelanggan">Buat Akun</string>
+    <string name="Verifikasi_Pelanggan">Verifikasi</string>
+    <string name="Kode_tidak_terkirimPelanggan">Tidak menerima Kode?</string>
+    <string name="Kirim_UlangPelanggan">Kirim Ulang</string>
+    <string name="Lupa_PasswordPelanggan">Lupa Kata Sandi</string>
+    <string name="Verifikasi_BerhasilPelanggan">Verifikasi Berhasil</string>
 
     <!--SUPIR -->
+    <string name="Login_Header_Supir">Masuk Akun\nSupir</string>
     <string name="Register_Header_Supir">Buat Akun\nSupir</string>
     <string name="sudah_punya_akun_supir">Sudah punya akun?</string>
     <string name="Masuk_kebuat_akun_supir">Masuk</string>
     <string name="Masuk_supir">Masuk</string>
     <string name="toggle_password_visibility_supir">lihat password</string>
+    <string name="belum_punya_akunDriver">Belum Punya Akun</string>
+    <string name="Buat_akunDriver">Buat Akun</string>
+    <string name="Verifikasi_Driver">Verifikasi</string>
+    <string name="Kode_tidak_terkirimSupir">Tidak menerima Kode?</string>
+    <string name="Kirim_UlangDriver">Kirim Ulang</string>
+    <string name="Lupa_PasswordSupir">Lupa Kata Sandi</string>
+    <string name="Verifikasi_BerhasilSupir">Verifikasi Berhasil</string>
 
     <string name="Label_nama_pelanggan">Nama Lengkap</string>
     <string name="Label_email_pelanggan">Email</string>
@@ -34,5 +50,11 @@
 
     <string name="arrow">Deskripsi untuk ikon panah</string>
     <string name="Punya_akun">Sudah Punya Akun?</string>
+
+    <string name="show_hide_password">show-hide</string>
+
+    <string name="Dashboard_namaAplikasi">SiKepah</string>
+
+    <string name="Deskripsi_Verifikasi">Masukan kode Verifikasi yang dikirimkan\ndi-Emailmu!</string>
 
 </resources>
