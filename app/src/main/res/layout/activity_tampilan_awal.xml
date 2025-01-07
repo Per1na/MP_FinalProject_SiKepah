@@ -89,7 +89,7 @@
 
             <!-- TOMBOL/BUTTON SUPIR -->
             <Button
-                android:id="@+id/driverButton"
+                android:id="@+id/DriverButton"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_60sdp"
@@ -98,11 +98,12 @@
                 android:text="@string/logim_sebagai_2"
                 android:textColor="@color/putih"
                 android:textSize="@dimen/_18ssp"
-                android:elevation="@dimen/_32sdp"/>
+                android:elevation="@dimen/_32sdp"
+                android:onClick="PindahKeCreatePelanggan"/>
 
             <!-- TOMBOL/BUTTON Pelanggan -->
             <Button
-                android:id="@+id/pelangganButton"
+                android:id="@+id/PelangganButton"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_60sdp"
@@ -111,7 +112,8 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/login_sebagai_1"
                 android:textColor="@color/putih"
-                android:textSize="@dimen/_18ssp" />
+                android:textSize="@dimen/_18ssp"
+                android:onClick="PindahKeCreateDriver"/>
         </LinearLayout>
 
 
