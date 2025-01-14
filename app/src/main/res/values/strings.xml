@@ -54,6 +54,10 @@
     <string name="show_hide_password">show-hide</string>
 
     <string name="Dashboard_namaAplikasi">SiKepah</string>
+    <string name="Label_Email">Email</string>
+    <string name="Lupa_Kata_Sandi">Lupa Kata Sandi</string>
+    <string name="Deskripsi_LupaKataSandi">Dapatkan kode Verifikasi dari Emailmu!</string>
+
 
     <string name="Deskripsi_Verifikasi">Masukan kode Verifikasi yang dikirimkan\ndi-Emailmu!</string>
 

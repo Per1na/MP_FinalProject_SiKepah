@@ -24,6 +24,10 @@
 
         <activity android:name=".CreatePelangganActivity"/>
         <activity android:name=".CreateDriverActivity"/>
+        <activity android:name=".VerifikasiPelangganActivity" />
+        <activity android:name=".VerifikasiDriverActivity" />
+        <activity android:name=".LoginPelangganActivity" />
+        <activity android:name=".LoginDriverActivity" />
 
     </application>
 

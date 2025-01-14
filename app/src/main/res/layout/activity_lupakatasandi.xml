@@ -2,85 +2,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Container utama menggunakan RelativeLayout untuk penataan elemen di dalamnya -->
     <android.widget.RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/hijau_lumut"
-        android:layout_gravity="">
+        android:background="@color/hijau_lumut">
 
-        <!-- LinearLayout untuk menampung elemen-elemen utama secara vertikal -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_60sdp"
             android:orientation="vertical"
+            android:gravity="center"
             android:padding="@dimen/_30sdp"
             android:weightSum="1">
 
             <!-- TextView Header -->
             <TextView
-                android:id="@+id/title_text"
+                android:id="@+id/LupaKataSandi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_80sdp"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_70sdp"
                 android:fontFamily="@font/poppins_bold"
-                android:shadowColor="@color/hitam"
-                android:shadowDx="4"
-                android:shadowDy="4"
-                android:shadowRadius="10"
-                android:text="@string/Login_Header_Pelanggan"
+                android:text="@string/Lupa_Kata_Sandi"
                 android:textAlignment="textStart"
                 android:textAllCaps="true"
-                android:textColor="@color/Putih_pudar"
-                android:textSize="@dimen/_34ssp" />
+                android:textColor="@color/putih"
+                android:textSize="@dimen/_20ssp"
+                android:shadowColor="@color/hitam"
+                android:shadowDx="2"
+                android:shadowDy="8"
+                android:shadowRadius="9"/>
 
-            <!-- EditText untuk Email Supir -->
+            <!-- EditText untuk Verifikasi Driver -->
             <EditText
-                android:id="@+id/etEmailPelanggan"
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:autofillHints="emailAddress"
                 android:background="@drawable/rectangled_shape"
-                android:hint="@string/Label_email_supir"
+                android:hint="@string/Label_Email"
                 android:inputType="textEmailAddress"
                 android:padding="@dimen/_12sdp"
                 android:textSize="@dimen/_12ssp" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/etDeskripsiLupaKataSandi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/Deskripsi_LupaKataSandi"
+                android:textColor="@color/putih"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_10ssp"/>
 
-                <!-- EditText untuk Password -->
-                <EditText
-                    android:id="@+id/etKataSandiPelanggan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:autofillHints="password"
-                    android:background="@drawable/rectangled_shape"
-                    android:hint="@string/Label_sandi_supir"
-                    android:inputType="textPassword"
-                    android:padding="16dp"
-                    android:textSize="14sp" />
-
-                <!-- ImageView untuk ikon Show/Hide password -->
-                <ImageView
-                    android:id="@+id/showHidePasswordIconPelanggan"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="@dimen/_50sdp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/hide_supir"
-                    android:contentDescription="@string/show_hide_password" />
-
-            </RelativeLayout>
-
-            <!-- Tombol untuk submit atau navigasi -->
             <Button
-                android:id="@+id/button_masukpelanggan"
+                android:id="@+id/button_LupaKataSandi"
                 android:layout_width="139dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
@@ -89,23 +66,22 @@
                 android:drawableTop="@drawable/ic_arrow"
                 android:padding="8dp" />
 
-            <!-- LinearLayout untuk link ke halaman login jika sudah punya akun -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/BelumPunyaAkunPelanggan"
+                    android:id="@+id/teks_kiri"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/inter_18pt_medium"
-                    android:text="@string/belum_punya_akunPelanggan"
+                    android:text="@string/Kode_tidak_terkirimSupir"
                     android:textColor="@color/putih"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_12ssp" />
 
                 <View
                     android:layout_width="0dp"
@@ -113,14 +89,12 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/BuatAkunPelanggan"
+                    android:id="@+id/teks_kanan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_rectangled_button"
-                    android:text="@string/Buat_akunPelanggan"
-                    android:textSize="@dimen/_14ssp"
-                    android:textColor="@color/hitam"
-                    android:textAllCaps="false"/>
+                    android:text="@string/Kirim_UlangDriver"
+                    android:textSize="@dimen/_10ssp"
+                    android:background="@drawable/rounded_rectangled_button" />
             </LinearLayout>
 
         </LinearLayout>

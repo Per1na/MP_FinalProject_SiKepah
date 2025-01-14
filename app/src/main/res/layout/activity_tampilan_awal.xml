@@ -99,7 +99,7 @@
                 android:textColor="@color/putih"
                 android:textSize="@dimen/_18ssp"
                 android:elevation="@dimen/_32sdp"
-                android:onClick="PindahKeCreatePelanggan"/>
+                />
 
             <!-- TOMBOL/BUTTON Pelanggan -->
             <Button
@@ -113,7 +113,7 @@
                 android:text="@string/login_sebagai_1"
                 android:textColor="@color/putih"
                 android:textSize="@dimen/_18ssp"
-                android:onClick="PindahKeCreateDriver"/>
+                />
         </LinearLayout>
 
 

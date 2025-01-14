@@ -38,6 +38,7 @@
                 android:id="@+id/etUsernameSupir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="username"
                 android:hint="@string/Label_nama_supir"
                 android:background="@drawable/rectangled_shape"
                 android:inputType="textPersonName"
@@ -50,6 +51,7 @@
                 android:id="@+id/etEmailSupir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="emailAddress"
                 android:hint="@string/Label_email_supir"
                 android:background="@drawable/rectangled_shape"
                 android:inputType="textEmailAddress"
@@ -67,6 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:autofillHints="password"
                     android:background="@drawable/rectangled_shape"
                     android:hint="@string/Label_sandi_supir"
                     android:inputType="textPassword"
@@ -133,11 +136,15 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/teks_kanan"
+                    android:id="@+id/btnMasuk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Masuk_supir"
-                    android:background="@drawable/rounded_rectangled_button" />
+                    android:background="@drawable/masuk_button"
+                    android:textColor="@color/hitam"
+                    android:textSize="@dimen/_14sdp"
+                    android:clickable="true"
+                    android:focusable="true"/>
             </LinearLayout>
 
         </LinearLayout>

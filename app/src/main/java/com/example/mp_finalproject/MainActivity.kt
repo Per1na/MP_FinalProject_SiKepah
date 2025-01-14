@@ -3,14 +3,13 @@ package com.example.mp_finalproject
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tampilan_awal)
+        setContentView(R.layout.activity_tampilan_awal)  // Layout utama
 
         // Navigasi ke activity_createpelanggan
         findViewById<View>(R.id.PelangganButton).setOnClickListener {

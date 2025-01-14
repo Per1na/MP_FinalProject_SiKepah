@@ -64,11 +64,12 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/rounded_rectangled_button"
                 android:drawableTop="@drawable/ic_arrow"
+                android:importantForAccessibility="no"
                 android:padding="8dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="24dp"
+                android:layout_height="34dp"
                 android:layout_marginTop="@dimen/_30sdp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
@@ -92,9 +93,9 @@
                     android:id="@+id/teks_kanan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rectangled_button"
                     android:text="@string/Kirim_UlangDriver"
-                    android:textSize="@dimen/_10ssp"
-                    android:background="@drawable/rounded_rectangled_button" />
+                    android:textSize="@dimen/_10ssp" />
             </LinearLayout>
 
         </LinearLayout>

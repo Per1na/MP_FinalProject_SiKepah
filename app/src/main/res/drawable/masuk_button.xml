@@ -1,0 +1,8 @@
+<!-- rounded_rectangled_button.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="16dp" />
+    <solid android:color="@color/putih" />
+    <!-- Ganti dengan warna sesuai desain Anda -->
+
+</shape>

@@ -39,6 +39,7 @@
                 android:id="@+id/etUsernamePelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="username"
                 android:hint="@string/Label_nama_pelanggan"
                 android:background="@drawable/rectangled_shape"
                 android:inputType="text"
@@ -51,6 +52,7 @@
                 android:id="@+id/etEmailPelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="emailAddress"
                 android:hint="@string/Label_email_pelanggan"
                 android:background="@drawable/rectangled_shape"
                 android:inputType="textEmailAddress"
@@ -68,6 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:autofillHints="password"
                     android:background="@drawable/rectangled_shape"
                     android:hint="@string/Label_sandi_pelanggan"
                     android:inputType="textPassword"
@@ -136,7 +139,7 @@
                     android:id="@+id/teks_kanan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Masuk_supir"
+                    android:text="@string/Masuk_pelanggan"
                     android:background="@drawable/rounded_rectangled_button" />
             </LinearLayout>
 

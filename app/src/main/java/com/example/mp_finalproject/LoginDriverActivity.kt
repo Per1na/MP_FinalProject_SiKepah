@@ -1,5 +1,6 @@
 package com.example.mp_finalproject
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
@@ -10,10 +11,10 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class CreateDriverActivity : AppCompatActivity() {
+class LoginDriverActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_createdriver)  // Layout driver
+        setContentView(R.layout.activity_logindriver)
 
         val backButton: ImageView = findViewById(R.id.back_button)
         backButton.setOnClickListener {
@@ -25,13 +26,10 @@ class CreateDriverActivity : AppCompatActivity() {
             // Menutup aktivitas ini agar tidak ada di stack
             finish()
         }
-
-        // Referensi EditText
-        val etUsernameDriver = findViewById<EditText>(R.id.etUsernameSupir)
-        val etEmailDriver = findViewById<EditText>(R.id.etEmailSupir)
-        val etKataSandiDriver = findViewById<EditText>(R.id.etKataSandiSupir)
-        val buttonCreateDriver = findViewById<Button>(R.id.button_createSupir)
-        val buttonMasukDriver = findViewById<Button>(R.id.btnMasuk)
+        val etEmailDriver = findViewById<EditText>(R.id.etEmailDriver)
+        val etKataSandiDriver = findViewById<EditText>(R.id.etKataSandiDriver)
+        val buttonMasukDriver = findViewById<Button>(R.id.button_masukDriver)
+        val buttonCreateAccountDriver = findViewById<Button>(R.id.BuatAkunDriver)
 
         // Referensi ImageView untuk ikon show/hide password
         val showHidePasswordIcon: ImageView = findViewById(R.id.showHidePasswordIconDriver)
@@ -59,20 +57,8 @@ class CreateDriverActivity : AppCompatActivity() {
             // Memastikan kursor tetap di akhir teks setelah perubahan inputType
             etKataSandiDriver.setSelection(etKataSandiDriver.text.length)
         }
-
         // Tombol untuk registrasi
-        buttonCreateDriver.setOnClickListener {
-
-            // Validasi username
-            val username = etUsernameDriver.text.toString().trim()
-            if (username.isEmpty()) {
-                etUsernameDriver.error = "Nama tidak boleh kosong"
-                return@setOnClickListener
-            }
-            if (!username.matches(Regex("^[A-Za-z ]+$"))) {
-                etUsernameDriver.error = "Nama hanya boleh mengandung huruf"
-                return@setOnClickListener
-            }
+        buttonMasukDriver.setOnClickListener {
 
             // Validasi email
             val email = etEmailDriver.text.toString().trim()
@@ -97,18 +83,11 @@ class CreateDriverActivity : AppCompatActivity() {
             }
 
             // Jika semua validasi berhasil
-            Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
-
-            // Lakukan aksi lebih lanjut, seperti menyimpan data atau navigasi ke aktivitas lain
-
-            // Navigate to VerifikasiDriverActivity
-            val intent = Intent(this, VerifikasiDriverActivity::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
         }
-        buttonMasukDriver.setOnClickListener {
-            val intent = Intent(this, LoginDriverActivity::class.java)
+        buttonCreateAccountDriver.setOnClickListener {
+            val intent = Intent(this, CreateDriverActivity::class.java)
             startActivity(intent)
         }
     }
 }
-

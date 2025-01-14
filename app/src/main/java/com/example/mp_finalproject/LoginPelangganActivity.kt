@@ -1,5 +1,6 @@
 package com.example.mp_finalproject
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
@@ -10,30 +11,28 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class CreatePelangganActivity : AppCompatActivity() {
+class LoginPelangganActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_createpelanggan)  // Layout create pelanggan
+        setContentView(R.layout.activity_loginpelanggan)
 
         val backButton: ImageView = findViewById(R.id.back_button)
         backButton.setOnClickListener {
-            // Menggunakan Intent untuk kembali ke MainActivity
+            // Kembali ke MainActivity
             val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP // Menambahkan flag untuk menghapus aktivitas yang berada di atas MainActivity
+            // Menambahkan flag untuk menghapus aktivitas yang berada di atas MainActivity
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
-            finish() // Menutup aktivitas ini agar tidak ada di stack
+            // Menutup aktivitas ini agar tidak ada di stack
+            finish()
         }
-
-
-        // Referensi EditText
-        val etUsernamePelanggan = findViewById<EditText>(R.id.etUsernamePelanggan)
         val etEmailPelanggan = findViewById<EditText>(R.id.etEmailPelanggan)
         val etKataSandiPelanggan = findViewById<EditText>(R.id.etKataSandiPelanggan)
-        val buttonCreatePelanggan = findViewById<Button>(R.id.button_createPelanggan)
-        val buttonMasukPelanggan = findViewById<Button>(R.id.teks_kanan)
+        val buttonMasukPelanggan = findViewById<Button>(R.id.button_masukpelanggan)
+        val buttonCreateAccountPelanggan = findViewById<Button>(R.id.BuatAkunPelanggan)
 
         // Referensi ImageView untuk ikon show/hide password
-        val showHidePasswordIcon: ImageView = findViewById(R.id.showHidePasswordIcon)
+        val showHidePasswordIcon: ImageView = findViewById(R.id.showHidePasswordIconPelanggan)
 
         // Flag untuk menentukan apakah password sedang disembunyikan atau ditampilkan
         var isPasswordVisible = false
@@ -58,20 +57,8 @@ class CreatePelangganActivity : AppCompatActivity() {
             // Memastikan kursor tetap di akhir teks setelah perubahan inputType
             etKataSandiPelanggan.setSelection(etKataSandiPelanggan.text.length)
         }
-
         // Tombol untuk registrasi
-        buttonCreatePelanggan.setOnClickListener {
-
-            // Validasi username
-            val username = etUsernamePelanggan.text.toString().trim()
-            if (username.isEmpty()) {
-                etUsernamePelanggan.error = "Nama tidak boleh kosong"
-                return@setOnClickListener
-            }
-            if (!username.matches(Regex("^[A-Za-z ]+$"))) {
-                etUsernamePelanggan.error = "Nama hanya boleh mengandung huruf"
-                return@setOnClickListener
-            }
+        buttonMasukPelanggan.setOnClickListener {
 
             // Validasi email
             val email = etEmailPelanggan.text.toString().trim()
@@ -96,17 +83,10 @@ class CreatePelangganActivity : AppCompatActivity() {
             }
 
             // Jika semua validasi berhasil
-            Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
-
-            // Lakukan aksi lebih lanjut, seperti menyimpan data atau navigasi ke aktivitas lain
-
-            // Navigate to VerifikasiPelangganActivity
-            val intent = Intent(this, VerifikasiPelangganActivity::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
         }
-
-        buttonMasukPelanggan.setOnClickListener {
-            val intent = Intent(this, LoginPelangganActivity::class.java)
+        buttonCreateAccountPelanggan.setOnClickListener {
+            val intent = Intent(this, CreatePelangganActivity::class.java)
             startActivity(intent)
         }
     }
