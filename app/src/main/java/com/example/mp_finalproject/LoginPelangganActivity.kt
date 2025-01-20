@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 class LoginPelangganActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_loginpelanggan)
+        setContentView(R.layout.activity_loginpelanggan) // Layout Masuk Akun Pelanggan
 
         val backButton: ImageView = findViewById(R.id.back_button)
         backButton.setOnClickListener {

@@ -3,6 +3,7 @@ import org.apache.tools.ant.util.JavaEnvUtils.VERSION_11
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -17,6 +18,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        dataBinding = true
     }
 
     buildTypes {
@@ -47,10 +51,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
     // Tambahan Library dependensi SDP dan SSP
     implementation("com.intuit.ssp:ssp-android:1.0.6")
     implementation("com.intuit.sdp:sdp-android:1.1.1")
     implementation("androidx.cardview:cardview:1.0.0")
+
+    implementation ("com.github.qamarelsafadi:CurvedBottomNavigation:0.1.3")
+    implementation("androidx.databinding:databinding-runtime:version")
 
     //Tambahan Library
     //implementation ("com.google.android.material:material:1.12.0")

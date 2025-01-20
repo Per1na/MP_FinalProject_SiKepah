@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 class CreateDriverActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_createdriver)  // Layout driver
+        setContentView(R.layout.activity_createdriver)  // Layout Buat Akun Driver
 
         val backButton: ImageView = findViewById(R.id.back_button)
         backButton.setOnClickListener {

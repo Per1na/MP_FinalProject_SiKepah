@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 class CreatePelangganActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_createpelanggan)  // Layout create pelanggan
+        setContentView(R.layout.activity_createpelanggan)  // Layout Buat Akun pelanggan
 
         val backButton: ImageView = findViewById(R.id.back_button)
         backButton.setOnClickListener {

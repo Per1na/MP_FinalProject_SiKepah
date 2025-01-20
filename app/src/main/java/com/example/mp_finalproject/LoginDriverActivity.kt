@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 class LoginDriverActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_logindriver)
+        setContentView(R.layout.activity_logindriver) // Layout Masuk Akun Driver
 
         val backButton: ImageView = findViewById(R.id.back_button)
         backButton.setOnClickListener {

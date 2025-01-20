@@ -9,8 +9,10 @@ appcompat = "1.6.1"
 material = "1.10.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
+meowBottomNavigation = "1.2.0"
 sdp = "1.1.0"
 ssp = "1.1.0"
+databindingCompiler = "8.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -21,10 +23,14 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+meow-bottom-navigation = { module = "com.etebarian:meow-bottom-navigation", version.ref = "meowBottomNavigation" }
 sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdp" }
 ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "ssp" }
+databinding-compiler = { group = "androidx.databinding", name = "databinding-compiler", version.ref = "databindingCompiler" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-kapt = { id = "kotlin-kapt", version.ref = "kotlin" }
 
