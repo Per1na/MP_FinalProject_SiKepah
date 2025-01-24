@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "817805749141",
+    "project_id": "sikepah-cc287",
+    "storage_bucket": "sikepah-cc287.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817805749141:android:fa135c9e45f5d8ebefe49c",
+        "android_client_info": {
+          "package_name": "com.example.mp_finalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTFIvS7rsMRlJnkhUJCV0TGihyM_opgmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,7 +7,8 @@
     <string name="logim_sebagai_2">Supir</string>
 
     <string name="app_name">SIKEPAH</string>
-
+    <string name="PickUp">PickUp</string>
+    <string name="Btn_Lanjut">Lanjut</string>
 
 
     <!--PELANGGAN -->
@@ -65,6 +66,42 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="checklist_ikon">checklist ikon</string>
 
+    <!-- Jenis Sampah -->
+    <string name="Jenis_Sampah">Jenis Sampah</string>
+    <string name="SampahPlastik">Plastik</string>
+    <string name="SampahKertas_Kardus">Kertas/Kardus</string>
+    <string name="SampahLogam">Logam</string>
+    <string name="SampahKaca">Kaca</string>
+    <string name="SampahElektronik">Elektronik</string>
+
+    <string name="Btn_Plastik">Plastik</string>
+    <string name="Btn_Kertas_Kardus">Kertas/Kardus</string>
+    <string name="Btn_Logam">Logam</string>
+    <string name="Btn_Kaca">Kaca</string>
+    <string name="Btn_Elektronik">Elektronik</string>
+
+    <!-- Berat Sampah -->
+    <string name="BeratSampah">Masukan Berat Sampah : </string>
+    <string name="NoteJenis_Sampah">Boleh memilih lebih dari satu jenis sampah</string>
+    <string name="Berat">Berat</string>
+    <string name="Berat_KG">Kg</string>
+
+    <string name="LatarCardView">LatarCardView</string>
+
+    <!-- PickUp2 -->
+    <string name="Title_Alamat_Penjemputan">Alamat Penjemputan</string>
+    <string name="Rumah_Kost">Rumah Kost</string>
+    <string name="Kost_Sahabat">Kost Sahabat</string>
+    <string name="Ubah_Detail_Alamat">Ubah Detail Alamat</string>
+    <string name="Catatan">Catatan</string>
+    <string name="Masukan_Informasi_Penjemputan">Masukan Informasi Penjemputan</string>
+    <string name="Lama_Lengkap">Nama Lengkap</string>
+    <string name="Alamat_PickUp">Alamat</string>
+    <string name="Nomor_TeleponPickUp">Nomor Telepon</string>
+    <string name="Konfirmasi_PickUp2">Konfirmasi</string>
+
+    <!-- Rincian Pemesanan -->
+    <string name="Rincian_Penjemputan">Rincian Penjemputan</string>
 
 
 </resources>

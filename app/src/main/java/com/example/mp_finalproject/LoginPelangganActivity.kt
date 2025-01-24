@@ -8,6 +8,7 @@ import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -87,6 +88,12 @@ class LoginPelangganActivity : AppCompatActivity() {
         }
         buttonCreateAccountPelanggan.setOnClickListener {
             val intent = Intent(this, CreatePelangganActivity::class.java)
+            startActivity(intent)
+        }
+        // Tambahkan ini untuk navigasi ke activity_lupakatasandi
+        val etLupaPasswordPelanggan = findViewById<TextView>(R.id.etLupaPasswordPelanggan)
+        etLupaPasswordPelanggan.setOnClickListener {
+            val intent = Intent(this, LupaSandiActivity::class.java)
             startActivity(intent)
         }
     }

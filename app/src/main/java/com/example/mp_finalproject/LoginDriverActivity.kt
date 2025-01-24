@@ -8,6 +8,7 @@ import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -87,6 +88,13 @@ class LoginDriverActivity : AppCompatActivity() {
         }
         buttonCreateAccountDriver.setOnClickListener {
             val intent = Intent(this, CreateDriverActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Tambahkan ini untuk navigasi ke activity_lupakatasandi
+        val etLupaPasswordSupir = findViewById<TextView>(R.id.etLupaPasswordSupir)
+        etLupaPasswordSupir.setOnClickListener {
+            val intent = Intent(this, LupaSandiActivity::class.java)
             startActivity(intent)
         }
     }

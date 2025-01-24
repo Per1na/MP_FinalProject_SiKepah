@@ -1,5 +1,5 @@
 [versions]
-agp = "8.7.3"
+agp = "8.8.0"
 kotlin = "1.9.24"
 coreKtx = "1.10.1"
 junit = "4.13.2"
@@ -13,6 +13,8 @@ meowBottomNavigation = "1.2.0"
 sdp = "1.1.0"
 ssp = "1.1.0"
 databindingCompiler = "8.2.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseAuth = "23.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,10 +29,12 @@ meow-bottom-navigation = { module = "com.etebarian:meow-bottom-navigation", vers
 sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdp" }
 ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "ssp" }
 databinding-compiler = { group = "androidx.databinding", name = "databinding-compiler", version.ref = "databindingCompiler" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-kapt = { id = "kotlin-kapt", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

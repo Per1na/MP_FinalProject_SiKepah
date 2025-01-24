@@ -7,4 +7,10 @@
     <color name="hijau_lumut">#4BAE4F</color>
     <color name="Krem">#FFF2C2</color>
     <color name="Putih_pudar">#F0F0F0 </color>
+
+    <color name="blue">#007AFF</color> <!-- Blue color for checked state -->
+    <color name="green">#00FF00</color> <!-- Green color for focused state -->
+    <color name="gray">#D3D3D3</color> <!-- Gray color for pressed state -->
+    <color name="light_gray">#E0E0E0</color> <!-- Light gray for disabled state -->
+    <color name="dark_gray">#A9A9A9</color> <!-- Dark gray for disabled stroke -->
 </resources>

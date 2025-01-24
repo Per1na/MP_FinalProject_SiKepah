@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Krem">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/dashboard_nav"
+        android:elevation="@dimen/_6sdp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <TextView
+            android:id="@+id/PickUp2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/PickUp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:shadowRadius="4"/>
+
+        <!-- Tombol Kembali -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginStart="@dimen/_36sdp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/arrow"
+            android:src="@drawable/back_button_putih"
+            android:elevation="@dimen/_12sdp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/DetailAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        android:padding="@dimen/_14sdp"
+        android:background="@drawable/rounded_dashboard"
+        android:layout_margin="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/AlamatPenjemputan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Title_Alamat_Penjemputan"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_18sdp"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="6"
+            android:shadowRadius="4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/RumahKost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Rumah_Kost"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_24sdp"
+                android:textStyle="bold"
+                android:shadowColor="@color/hitam"
+                android:shadowDx="2"
+                android:shadowDy="6"
+                android:shadowRadius="4"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/KostSahabat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Kost_Sahabat"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:textSize="@dimen/_14sdp"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:shadowRadius="2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_16sdp">
+
+            <Button
+                android:id="@+id/BtnUbahDetailAlamat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_dashboard"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/Ubah_Detail_Alamat"
+                android:textSize="@dimen/_10sdp"
+                android:shadowColor="@color/hitam"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/BtnCatatan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_dashboard"
+                android:text="@string/Catatan"
+                android:fontFamily="@font/poppins_semibold"
+                android:textAllCaps="false"
+                android:textColor="@color/putih"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:shadowColor="@color/hitam"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Tombol "Lanjut" -->
+
+    <LinearLayout
+        android:id="@+id/Bg_InformasiPenjempuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DetailAlamat"
+        android:layout_margin="@dimen/_16sdp"
+        android:background="@drawable/rounded_dashboard"
+        android:orientation="vertical"
+        android:padding="@dimen/_14sdp">
+
+        <TextView
+            android:id="@+id/InformasiPenjemputan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:shadowColor="@color/hitam"
+            android:layout_gravity="center_horizontal"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="@string/Masukan_Informasi_Penjemputan"
+            android:textAllCaps="false"
+            android:textColor="@color/putih"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/Nama_Lengkap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:autofillHints="username"
+            android:background="@drawable/rounded_dashboard"
+            android:hint="@string/Label_nama_pelanggan"
+            android:inputType="text"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/putih"
+            android:textColorHint="@color/putih"
+            android:textSize="@dimen/_12ssp" />
+
+        <EditText
+            android:id="@+id/Alamat_PickUp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:autofillHints="username"
+            android:background="@drawable/rounded_dashboard"
+            android:hint="@string/Alamat_PickUp"
+            android:inputType="text"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/putih"
+            android:textColorHint="@color/putih"
+            android:textSize="@dimen/_12ssp" />
+
+        <EditText
+            android:id="@+id/NoHp_PickUp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:autofillHints="username"
+            android:background="@drawable/rounded_dashboard"
+            android:hint="@string/Nomor_TeleponPickUp"
+            android:inputType="phone"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/putih"
+            android:textColorHint="@color/putih"
+            android:textSize="@dimen/_12ssp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/KonfirmasiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Bg_InformasiPenjempuran"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="@dimen/_32sdp"
+        android:paddingEnd="@dimen/_32sdp"
+        android:background="@drawable/rounded_dashboard"
+        android:text="@string/Konfirmasi_PickUp2"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:shadowColor="@color/hitam"
+        android:shadowDx="2"
+        android:shadowDy="4"
+        android:shadowRadius="4"/>
+
+</RelativeLayout>

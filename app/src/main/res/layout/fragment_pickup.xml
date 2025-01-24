@@ -1,19 +1,407 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Krem"
     tools:context=".fragments.PickupFragment">
 
-    <TextView
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/hitam"
-        android:textSize="32sp"
+    <!-- Toolbar di bagian atas -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Pickup" />
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/dashboard_nav"
+        android:elevation="@dimen/_6sdp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-</FrameLayout>
+        <!-- TextView untuk judul toolbar -->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/PickUp"
+            android:textColor="@android:color/white"
+
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:shadowRadius="4"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- CardView untuk CheckBox -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewCheckBox"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        android:contentDescription="@string/LatarCardView"
+        android:importantForAccessibility="yes"
+        >
+
+        <!-- LinearLayout utama -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_dashboard"
+            android:paddingTop="0dp">
+
+            <!-- LinearLayout pertama: Label dan Garis -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="@dimen/_2sdp"
+                >
+
+                <!-- TextView untuk label Jenis Sampah -->
+                <TextView
+                    android:id="@+id/JenisSampah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Jenis_Sampah"
+                    android:paddingEnd="@dimen/_24sdp"
+                    android:paddingStart="@dimen/_24sdp"
+                    android:textSize="@dimen/_18ssp"
+                    android:textColor="@color/putih"
+                    android:fontFamily="@font/inter_18pt_bold"
+                    android:shadowColor="@color/hitam"
+                    android:shadowDx="2"
+                    android:shadowDy="6"
+                    android:shadowRadius="4"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@string/NoteJenis_Sampah"
+                    android:textColor="@color/putih"
+                    android:fontFamily="@font/poppins_regular"
+                    android:shadowColor="@color/hitam"
+                    android:shadowDx="2"
+                    android:shadowDy="4"
+                    android:shadowRadius="2"
+                    />
+
+                <!-- Garis bawah untuk label -->
+                <View
+                    android:id="@+id/UnderlineJenisSampah"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/putih"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- CheckBoxGroup untuk mengelompokkan CheckBox -->
+            <LinearLayout
+                android:id="@+id/checkBoxGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- CheckBox Plastik -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp">
+
+                    <TextView
+                        android:id="@+id/TextPlastik"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahPlastik"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:shadowRadius="4"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxPlastik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Plastik"
+                        />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Plastik -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih" />
+
+                <!-- CheckBox Kertas/Kardus -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp">
+
+                    <TextView
+                        android:id="@+id/TextKertas_Kardus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahKertas_Kardus"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:shadowRadius="4"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxKertas_Kardus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Kertas_Kardus" />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Kertas/Kardus -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih"/>
+
+                <!-- CheckBox Logam -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp">
+
+                    <TextView
+                        android:id="@+id/TextLogam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahLogam"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:shadowRadius="4"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxLogam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Logam" />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Logam -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih"/>
+
+                <!-- CheckBox Kaca -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp">
+
+                    <TextView
+                        android:id="@+id/TextKaca"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahKaca"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:shadowRadius="4"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxKaca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Kaca" />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Kaca -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih"/>
+
+                <!-- CheckBox Elektronik -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp">
+
+                    <TextView
+                        android:id="@+id/TextElektronik"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahElektronik"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:shadowRadius="4"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxElektronik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Elektronik" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Layout untuk Input Berat Sampah -->
+    <LinearLayout
+        android:id="@+id/layoutWeightInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardViewCheckBox"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="16dp"
+        android:background="@drawable/rounded_beratsampah"
+        android:elevation="4dp">
+
+
+        <!-- TextView untuk Label -->
+        <TextView
+            android:id="@+id/weightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/BeratSampah"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/putih"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/inter_18pt_bold"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:shadowRadius="4"/>
+
+        <!-- EditText untuk Input Berat Sampah -->
+        <EditText
+            android:id="@+id/inputWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:hint="@string/Berat"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/putih"
+            android:background="@android:color/transparent"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:textColorHint="@color/Putih_pudar"
+            android:gravity="center_horizontal"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+        <!-- TextView untuk Satuan "kg" -->
+        <TextView
+            android:id="@+id/KgText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Berat_KG"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/putih"
+            android:gravity="center"
+            android:fontFamily="@font/inter_18pt_bold"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:shadowRadius="4"/>
+
+    </LinearLayout>
+
+    <!-- Tombol "Lanjut" -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutWeightInput"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="@dimen/_32sdp"
+        android:paddingEnd="@dimen/_32sdp"
+        android:background="@drawable/rounded_dashboard"
+        android:text="@string/Btn_Lanjut"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:shadowColor="@color/hitam"
+        android:shadowDx="2"
+        android:shadowDy="4"
+        android:shadowRadius="4"/>
+
+</RelativeLayout>

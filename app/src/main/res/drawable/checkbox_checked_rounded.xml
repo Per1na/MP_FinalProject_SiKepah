@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/hijau_lumut"/> <!-- Warna checkbox yang dicentang -->
+    <corners android:radius="25dp" /> <!-- Membuat sudut melengkung (bulat) -->
+    <size android:width="24dp" android:height="24dp"/>
+    <stroke android:color="@color/putih" android:width="2dp"/>
+</shape>

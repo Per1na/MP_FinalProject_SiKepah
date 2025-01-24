@@ -1,9 +1,13 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Krem">
+    android:background="@color/Krem"
+    tools:context=".fragments.PickupFragment">
 
+    <!-- Toolbar di bagian atas -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -12,212 +16,329 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-        <!-- Tombol Kembali -->
-        <ImageView
-            android:id="@+id/back_button"
-            android:layout_width="@dimen/_24sdp"
-            android:layout_height="@dimen/_24sdp"
-            android:layout_gravity="start|center_vertical"
-            android:contentDescription="@string/arrow"
-            android:src="@drawable/back_button"
-            app:tint="@color/putih"
-            android:elevation="@dimen/_12sdp"
-            android:layout_marginStart="@dimen/_20sdp" />
-
-
         <!-- TextView untuk judul toolbar -->
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/Dashboard_namaAplikasi"
+            android:text="@string/PickUp"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
+
     </androidx.appcompat.widget.Toolbar>
 
+    <!-- CardView untuk CheckBox -->
     <androidx.cardview.widget.CardView
-        android:id="@+id/jenis_sampah_card"
+        android:id="@+id/cardViewCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/rounded_rectangled"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp">
 
-        <!-- Konten card view -->
+        <!-- LinearLayout utama -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/hijau_lumut"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:background="@color/hijau_lumut">
 
-            <!-- Isi dari card view -->
-            <TextView
-                android:id="@+id/jenis_sampah"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="Jenis Sampah"
-                android:textColor="@color/putih"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <RadioGroup
-                android:id="@+id/jenis_sampah_group"
+            <!-- LinearLayout pertama: Label dan Garis -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="@dimen/_2sdp">
+
+                <!-- TextView untuk label Jenis Sampah -->
+                <TextView
+                    android:id="@+id/JenisSampah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Jenis_Sampah"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingStart="@dimen/_18sdp"
+                    android:textSize="@dimen/_18ssp"
+                    android:textColor="@color/putih"
+                    android:fontFamily="@font/inter_18pt_bold"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+                <!-- Garis bawah untuk label -->
+                <View
+                    android:id="@+id/UnderlineJenisSampah"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/putih"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- CheckBoxGroup untuk mengelompokkan CheckBox -->
+            <LinearLayout
+                android:id="@+id/checkBoxGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Radio button untuk pilihan jenis sampah -->
-                <RadioButton
-                    android:id="@+id/plastik"
+                <!-- CheckBox Plastik -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableEnd="@drawable/radio_button"
-                    android:drawablePadding="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Plastik"
-                    android:textColor="@color/putih"
-                    android:checked="true" /> <!-- Atur checked sesuai pilihan -->
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp">
 
-                <RadioButton
-                    android:id="@+id/kertas_kardus"
+                    <TextView
+                        android:id="@+id/TextPlastik"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahPlastik"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxPlastik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Plastik" />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Plastik -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih" />
+
+                <!-- CheckBox Kertas/Kardus -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableEnd="@drawable/radio_button"
-                    android:drawablePadding="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Kertas/Kardus"
-                    android:textColor="@color/putih"
-                    android:checked="true" />
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp">
 
-                <RadioButton
-                    android:id="@+id/logam"
+                    <TextView
+                        android:id="@+id/TextKertas_Kardus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahKertas_Kardus"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxKertas_Kardus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Kertas_Kardus" />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Kertas/Kardus -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih"/>
+
+                <!-- CheckBox Logam -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableEnd="@drawable/radio_button"
-                    android:drawablePadding="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Logam"
-                    android:textColor="@color/putih"
-                    android:checked="true" />
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp">
 
-                <RadioButton
-                    android:id="@+id/kaca"
+                    <TextView
+                        android:id="@+id/TextLogam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahLogam"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxLogam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Logam" />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Logam -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih"/>
+
+                <!-- CheckBox Kaca -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableEnd="@drawable/radio_button"
-                    android:drawablePadding="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Kaca"
-                    android:textColor="@color/putih"
-                    android:checked="true" />
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp">
 
-                <RadioButton
-                    android:id="@+id/elektronik"
+                    <TextView
+                        android:id="@+id/TextKaca"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahKaca"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <CheckBox
+                        android:id="@+id/CheckBoxKaca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Kaca" />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Kaca -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih"/>
+
+                <!-- CheckBox Elektronik -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableEnd="@drawable/radio_button"
-                    android:drawablePadding="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Elektronik"
-                    android:textColor="@color/putih"
-                    android:checked="true" />
-            </RadioGroup>
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp">
 
+                    <TextView
+                        android:id="@+id/TextElektronik"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SampahElektronik"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/putih"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"/>
 
+                    <CheckBox
+                        android:id="@+id/CheckBoxElektronik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_rounded"
+                        android:contentDescription="@string/Btn_Elektronik" />
+
+                </LinearLayout>
+
+                <!-- Garis bawah untuk CheckBox Elektronik -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/putih"/>
+            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Konten lainnya -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/berat_sampah_card"
+    <!-- Layout untuk Input Berat Sampah -->
+    <LinearLayout
+        android:id="@+id/layoutWeightInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/jenis_sampah_card"
-        android:layout_marginStart="16dp"
+        android:layout_below="@id/cardViewCheckBox"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp">
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:backgroundTint="@color/hijau_lumut">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- TextView untuk Label -->
+        <TextView
+            android:id="@+id/weightLabel"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/hijau_lumut"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="16dp">
+            android:text="@string/BeratSampah"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/putih"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/inter_18pt_bold"/>
 
-            <!-- Konten card untuk berat sampah -->
-            <TextView
-                android:id="@+id/berat_sampah"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif-medium"
-                android:text="Berat Sampah"
-                android:textColor="@color/putih"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+        <!-- EditText untuk Input Berat Sampah -->
+        <EditText
+            android:id="@+id/inputWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:hint="@string/Berat"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/rounded_rectangled"
+            android:textColor="@color/putih"
+            android:textColorHint="@color/Putih_pudar"
+            android:gravity="center_horizontal"
+            tools:ignore="TouchTargetSizeCheck"/>
 
-            <ImageView
-                android:id="@+id/minus_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="minus button"
-                android:src="@drawable/ic_remove" />
+        <!-- TextView untuk Satuan "kg" -->
+        <TextView
+            android:id="@+id/KgText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Berat_KG"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/putih"
+            android:gravity="center"
+            android:fontFamily="@font/inter_18pt_bold" />
 
-            <TextView
-                android:id="@+id/berat_sampah_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="xx"
-                android:textColor="@color/putih"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="kg"
-                android:textColor="@color/putih"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/plus_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="plus button"
-                android:src="@drawable/ic_add" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
+    <!-- Tombol "Lanjut" -->
     <Button
-        android:id="@+id/button_createPelanggan"
+        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/berat_sampah_card"
+        android:layout_below="@id/layoutWeightInput"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_rectangled"
-        android:backgroundTint="@color/hijau_lumut"
-        android:padding="8dp"
-        android:text="Next"
-        android:textColor="@color/putih"/>
+        android:paddingStart="@dimen/_32sdp"
+        android:paddingEnd="@dimen/_32sdp"
+        android:background="@drawable/rounded_dashboard"
+        android:text="@string/Btn_Lanjut"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppins_semibold"/>
+
 </RelativeLayout>
