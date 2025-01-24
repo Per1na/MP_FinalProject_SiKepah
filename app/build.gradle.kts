@@ -4,8 +4,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
-    id("com.google.gms.google-services")
-
 }
 
 android {
@@ -49,7 +47,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -62,10 +59,6 @@ dependencies {
 
     implementation ("com.github.qamarelsafadi:CurvedBottomNavigation:0.1.3")
     implementation("androidx.databinding:databinding-runtime:version")
-
-    implementation ("com.google.firebase:firebase-auth:23.1.0")
-    implementation(platform("com.google.firebase:firebase-bom:33.8.0"))
-    implementation("com.google.firebase:firebase-analytics")
 
 
     //Tambahan Library

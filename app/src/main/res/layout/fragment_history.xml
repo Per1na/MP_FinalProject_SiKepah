@@ -1,19 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/Krem"
     tools:context=".fragments.HistoryFragment">
 
-    <TextView
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/hitam"
-        android:textSize="32sp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="History" />
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/dashboard_nav"
+        android:layout_marginBottom="@dimen/_36sdp"
+        android:elevation="@dimen/_6sdp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/PickUp2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Riwayat"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:shadowRadius="4"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewPertama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="16dp"
+        android:padding="@dimen/_16sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header Hijau -->
+
+            <!-- Konten Putih -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rectangled_organik">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/hijau_lumut"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_12sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Pemesanan"
+                        android:layout_weight="1"
+                        android:textColor="@color/putih"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_gravity="start"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="#000001"
+                        android:textColor="@color/putih"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_gravity="center"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:background="@color/hijau_lumut"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_12sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Metode Pembayaran"
+                        android:layout_weight="1"
+                        android:textColor="@color/putih"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_gravity="start"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tunai"
+                        android:textColor="@color/putih"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_gravity="center"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <!-- Garis Hijau -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@color/putih" />
+
+                <!-- Alamat Penjemputan -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat Penjemputan"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp">
+                    
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama (+62)81-xxxx-xxxx\nJl.xxxx No.xx, RT.x/RW.x, xxxx\n(xxxx), KAB. xxxx, xxxx, xxxxx"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -6,14 +6,391 @@
     android:background="@color/Krem"
     tools:context=".fragments.HomeFragment">
 
-    <TextView
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/hitam"
-        android:textSize="32sp"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dashboard_nav">
+
+        <TextView
+            android:id="@+id/tvSikepah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginTop="6dp"
+            android:text="SiKepah"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_32sdp"
+            android:textStyle="bold"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="1"
+            android:shadowDy="4"
+            android:shadowRadius="2"/>
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/ic_profile" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home" />
+        android:layout_marginTop="@dimen/_60sdp">
+
+        <!-- Main Scrollable Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomNavigationBar"
+            android:background="@color/Krem"
+            android:padding="@dimen/_16sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Order Baru -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/rounded_dashboard"
+                    android:padding="@dimen/_16sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Baru"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_18ssp"
+                        android:textColor="#FFFFFF"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="1"
+                        android:shadowDy="4"
+                        android:shadowRadius="2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Pastikan area Anda terjangkau"
+                        android:textColor="#FFFFFF"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:shadowRadius="2"/>
+                </LinearLayout>
+
+                <!-- Riwayat Order -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/rounded_dashboard"
+                    android:padding="@dimen/_16sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Riwayat Order"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_18ssp"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Order #1 [ Status Selesai ]"
+                        android:textColor="#FFFFFF"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:shadowRadius="2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Order #2 [ Status Menunggu Driver ]"
+                        android:textColor="#FFFFFF"
+                        android:shadowColor="@color/hitam"
+                        android:shadowDx="1"
+                        android:shadowDy="3"
+                        android:shadowRadius="2"/>
+                </LinearLayout>
+
+                <!-- Categories -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_16sdp">
+
+                    <!-- Organik -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/rectangled_organik"
+                        android:backgroundTint="@color/hijau_lumut"
+                        android:padding="@dimen/_16sdp"
+                        android:id="@+id/layoutOrganik"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_8sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="ORGANIK"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_16ssp"
+                                android:textColor="#FFFFFF"
+                                android:shadowColor="@color/hitam"
+                                android:shadowDx="1"
+                                android:shadowDy="4"
+                                android:shadowRadius="2"/>
+
+                            <ImageView
+                                android:id="@+id/ivArrowOrganik"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ic_arrow_up"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvDeskripsiOrganik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Deskripsi sampah organik..."
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- Repeat for other categories -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/rectangled_anorganik"
+                        android:padding="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:id="@+id/layoutAnorganik"
+                        android:layout_marginBottom="@dimen/_8sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="ANORGANIK"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_16ssp"
+                                android:textColor="#FFFFFF"
+                                android:shadowColor="@color/hitam"
+                                android:shadowDx="1"
+                                android:shadowDy="4"
+                                android:shadowRadius="2"/>
+
+                            <ImageView
+                                android:id="@+id/ivArrowAnorganik"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ic_arrow_up"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvDeskripsiAnorganik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Deskripsi sampah Anorganik..."
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/rectangled_sampahb3"
+                        android:padding="@dimen/_16ssp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:id="@+id/layoutSampahB3"
+                        android:layout_marginBottom="@dimen/_8sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SAMPAH B3"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_16ssp"
+                                android:textColor="#FFFFFF"
+                                android:shadowColor="@color/hitam"
+                                android:shadowDx="1"
+                                android:shadowDy="4"
+                                android:shadowRadius="2"/>
+
+                            <ImageView
+                                android:id="@+id/ivArrowSampahB3"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ic_arrow_up"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvDeskripsiSampahB3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Deskripsi sampah b3..."
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/rectangled_sampahkertas"
+                        android:padding="@dimen/_16ssp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:id="@+id/layoutSampahKertas"
+                        android:layout_marginBottom="@dimen/_8sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SAMPAH KERTAS"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_16ssp"
+                                android:textColor="#FFFFFF"
+                                android:shadowColor="@color/hitam"
+                                android:shadowDx="1"
+                                android:shadowDy="4"
+                                android:shadowRadius="2"/>
+
+                            <ImageView
+                                android:id="@+id/ivArrowSampahKertas"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ic_arrow_up"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvDeskripsiSampahKertas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Deskripsi sampah Kertas..."
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/rectangled_residu"
+                        android:padding="16dp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:id="@+id/layoutSampahResidu"
+                        android:layout_marginBottom="@dimen/_8sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SAMPAH RESIDU"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_16ssp"
+                                android:textColor="#FFFFFF"
+                                android:shadowColor="@color/hitam"
+                                android:shadowDx="1"
+                                android:shadowDy="4"
+                                android:shadowRadius="2"/>
+
+                            <ImageView
+                                android:id="@+id/ivArrowSampahResidu"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ic_arrow_up"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvDeskripsiSampahResidu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Deskripsi sampah residu..."
+                            android:textColor="#FFFFFF"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation Bar -->
+        <LinearLayout
+            android:id="@+id/bottomNavigationBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@color/Krem"
+            android:padding="@dimen/_16sdp">
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>

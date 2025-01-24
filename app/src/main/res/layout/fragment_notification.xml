@@ -6,6 +6,30 @@
     android:background="@color/Krem"
     tools:context=".fragments.NotificationFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/dashboard_nav"
+        android:elevation="@dimen/_6sdp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <TextView
+            android:id="@+id/PickUp2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Notifikasi"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            android:shadowColor="@color/hitam"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:shadowRadius="4"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <TextView
         android:gravity="center"
         android:textStyle="bold"
@@ -14,6 +38,6 @@
         android:textSize="32sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Notification" />
+        android:text="Notifikasi" />
 
 </FrameLayout>

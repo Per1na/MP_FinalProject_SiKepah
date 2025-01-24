@@ -35,6 +35,8 @@
         <activity android:name=".PickUp2Activity" />
         <activity android:name=".LupaSandiActivity" />
         <activity android:name=".RincianPenjemputanActivity" />
+        <activity android:name=".ProfilPelangganActivity" />
+
 
     </application>
 
